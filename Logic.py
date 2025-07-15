@@ -22,7 +22,6 @@ Instructions:
 7. Focus only on medicines legally available without a prescription in the U.S.
 8. Use simple, friendly, and easy-to-understand language for a general audience. Avoid medical jargon.
 
-Be safe, concise, and supportive.
 """
 
     headers = {
