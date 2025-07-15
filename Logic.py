@@ -6,12 +6,12 @@ load_dotenv()
 
 TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 TOGETHER_ENDPOINT = "https://api.together.xyz/v1/chat/completions"
-LLM_MODEL = "meta-llama/Llama-3-8b-chat-hf"  # or whichever model you're using
+LLM_MODEL = "meta-llama/Llama-3-8b-chat-hf"  
 
 def get_medication_recommendation(symptoms: str) -> str:
     prompt = f"""
 You are a helpful AI assistant for personalized medicine.
-A user describes their symptoms: "{symptoms}"
+A user describes their symptoms: 
 
 Respond with a recommendation for possible over-the-counter medications or advice (if applicable).
 If symptoms are serious or unusual, advise them to consult a doctor.
