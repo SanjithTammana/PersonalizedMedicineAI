@@ -2,6 +2,8 @@ import os
 import requests
 from document_retriever import retrieve_relevant_docs
 
+load_dotenv()
+
 TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 API_URL = "https://api.together.xyz/v1/chat/completions"
 
