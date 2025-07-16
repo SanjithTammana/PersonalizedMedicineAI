@@ -2,8 +2,6 @@ import os
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()
-
 TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 TOGETHER_ENDPOINT = "https://api.together.xyz/v1/chat/completions"
 LLM_MODEL = "meta-llama/Llama-3-8b-chat-hf"  
