@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from logic import get_medication_recommendation
+from Logic import get_medication_recommendation
 
 app = FastAPI()
 
