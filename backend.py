@@ -2,6 +2,8 @@ import os
 import requests
 from dotenv import load_dotenv
 
+load_dotenv()  # <--- Add this to load .env variables
+
 TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 TOGETHER_ENDPOINT = "https://api.together.xyz/v1/chat/completions"
 LLM_MODEL = "meta-llama/Llama-3-8b-chat-hf"  
@@ -34,7 +36,7 @@ Instructions:
             {"role": "user", "content": symptoms}
         ],
         "temperature": 0.7,
-        "max_tokens": 200
+        "max_tokens": 1000
     }
 
     response = requests.post(TOGETHER_ENDPOINT, headers=headers, json=payload)
