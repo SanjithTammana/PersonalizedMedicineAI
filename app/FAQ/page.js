@@ -121,7 +121,7 @@ const FAQPage = () => {
         },
         {
           question: 'What information should I provide about my symptoms?',
-          answer: 'For the most accurate recommendations, please include:\n\n• Description of your symptoms\n• How long you\'ve had them\n• Severity level (mild, moderate, severe)\n• Your age range\n• Any current medications you\'re taking\n• Known allergies\n• Any relevant medical history',
+          answer: 'For the most accurate recommendations, please include:\n\n• Description of your symptoms\n• How long you&apos;ve had them\n• Severity level (mild, moderate, severe)\n• Your age range\n• Any current medications you&apos;re taking\n• Known allergies\n• Any relevant medical history',
         },
         {
           question: 'Can I switch treatment modes during a conversation?',
@@ -143,7 +143,7 @@ const FAQPage = () => {
         },
         {
           question: 'Is this a substitute for seeing a doctor?',
-          answer: 'No, this assistant is not a substitute for professional medical care. Always consult with a healthcare provider for:\n\n• Serious or persistent symptoms\n• Chronic health conditions\n• Prescription medications\n• Medical diagnoses\n• Symptoms that worsen or don\'t improve\n• Any concerns about your health',
+          answer: 'No, this assistant is not a substitute for professional medical care. Always consult with a healthcare provider for:\n\n• Serious or persistent symptoms\n• Chronic health conditions\n• Prescription medications\n• Medical diagnoses\n• Symptoms that worsen or don&apos;t improve\n• Any concerns about your health',
         },
         {
           question: 'How accurate are the recommendations?',
@@ -169,7 +169,7 @@ const FAQPage = () => {
         },
         {
           question: 'Can I combine different treatment approaches?',
-          answer: 'While you can explore different treatment modes, be cautious about combining treatments:\n\n• Some herbs can interact with medications\n• Essential oils may cause reactions\n• Always consult a healthcare provider before combining treatments\n• Inform your doctor about all supplements and remedies you\'re using\n• Start with one approach at a time when possible',
+          answer: 'While you can explore different treatment modes, be cautious about combining treatments:\n\n• Some herbs can interact with medications\n• Essential oils may cause reactions\n• Always consult a healthcare provider before combining treatments\n• Inform your doctor about all supplements and remedies you&apos;re using\n• Start with one approach at a time when possible',
         },
       ],
     },
@@ -192,8 +192,8 @@ const FAQPage = () => {
             Important Medical Disclaimer
           </Typography>
           <Typography>
-            This AI assistant provides information only and is not a substitute for professional medical advice, 
-            diagnosis, or treatment. For emergencies, call 911 immediately. Always consult with qualified 
+            This AI assistant provides information only and is not a substitute for professional medical advice,
+            diagnosis, or treatment. For emergencies, call 911 immediately. Always consult with qualified
             healthcare professionals for medical concerns.
           </Typography>
         </ImportantNote>
@@ -214,11 +214,11 @@ const FAQPage = () => {
                 onChange={handleChange(`${category}-${index}`)}
               >
                 <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography 
-                    variant="h6" 
-                    component="h3" 
-                    sx={{ 
-                      color: '#212529', 
+                  <Typography
+                    variant="h6"
+                    component="h3"
+                    sx={{
+                      color: '#212529',
                       fontWeight: 600,
                       fontSize: { xs: '1rem', sm: '1.25rem' }
                     }}
@@ -227,10 +227,10 @@ const FAQPage = () => {
                   </Typography>
                 </StyledAccordionSummary>
                 <StyledAccordionDetails>
-                  <Typography 
-                    sx={{ 
-                      whiteSpace: 'pre-line', 
-                      lineHeight: 1.6, 
+                  <Typography
+                    sx={{
+                      whiteSpace: 'pre-line',
+                      lineHeight: 1.6,
                       color: '#495057',
                       fontSize: { xs: '0.9rem', sm: '1rem' }
                     }}
@@ -250,22 +250,22 @@ const FAQPage = () => {
             Still Have Questions?
           </Typography>
           <Typography variant="body1" style={{ marginBottom: '1rem' }}>
-            If you have additional questions about using our AI Medical Assistant, 
-            remember that for any health concerns, it's always best to consult with a qualified healthcare professional.
+            If you have additional questions about using our AI Medical Assistant,
+            remember that for any health concerns, it&apos;s always best to consult with a qualified healthcare professional.
           </Typography>
           <Grid container spacing={2} justifyContent="center">
             <Grid item>
-              <Chip 
-                label="For Emergencies: Call 911" 
-                color="error" 
+              <Chip
+                label="For Emergencies: Call 911"
+                color="error"
                 variant="filled"
                 style={{ fontSize: '1rem', padding: '0.5rem' }}
               />
             </Grid>
             <Grid item>
-              <Chip 
-                label="Consult Your Doctor" 
-                color="primary" 
+              <Chip
+                label="Consult Your Doctor"
+                color="primary"
                 variant="outlined"
                 style={{ fontSize: '1rem', padding: '0.5rem' }}
               />

@@ -52,7 +52,7 @@ const AboutTeamPage = () => {
           The brilliant minds behind the PersonalizedMedicine AI Assistant
         </Typography>
       </HeaderBox>
-      
+
       <Grid container spacing={4}>
         {/* Srihith Chennareddy */}
         <Grid item xs={12} sm={6} md={4}>
@@ -77,7 +77,7 @@ const AboutTeamPage = () => {
               Michael Lu
             </Typography>
             <Typography variant="body1" gutterBottom sx={{ color: '#495057' }}>
-              I'm a rising junior at Peak to Peak Charter School in Boulder, Colorado, serving as co-coder for the VEX Robotics team. I've completed computer science courses at the pre-AP level and am planning to learn AP content over the summer. My experience in robotics programming has given me practical skills in problem-solving and collaborative coding.
+              I&apos;m a rising junior at Peak to Peak Charter School in Boulder, Colorado, serving as co-coder for the VEX Robotics team. I&apos;ve completed computer science courses at the pre-AP level and am planning to learn AP content over the summer. My experience in robotics programming has given me practical skills in problem-solving and collaborative coding.
             </Typography>
             <Typography variant="body2" sx={{ fontStyle: 'italic', mt: 2, color: '#20c997' }}>
               <strong>Grade:</strong> 11th grade <br/>
@@ -109,7 +109,7 @@ const AboutTeamPage = () => {
               Sanjith Tammana
             </Typography>
             <Typography variant="body1" gutterBottom sx={{ color: '#495057' }}>
-              I’m Sanjith Tammana, a high school student passionate about technology with experience in software development, machine learning, and data analysis. During a research internship at UT Dallas, I developed predictive models to analyze football player transfer values. As a Headstarter Fellow, I built projects such as chatbots and inventory management systems, honing my problem-solving skills. I also contributed to Rayfield Systems, an AI-powered compliance platform for energy developers, where I developed machine learning models for energy consumption forecasting. My technical ability is further demonstrated in my role as the President and Founder of Prosper Technology Student Association. Additionally, as a Life Scout, I’ve cultivated leadership abilities through mentoring and community conservation efforts, combining technical expertise with a dedication to meaningful solutions.
+              I&apos;m Sanjith Tammana, a high school student passionate about technology with experience in software development, machine learning, and data analysis. During a research internship at UT Dallas, I developed predictive models to analyze football player transfer values. As a Headstarter Fellow, I built projects such as chatbots and inventory management systems, honing my problem-solving skills. I also contributed to Rayfield Systems, an AI-powered compliance platform for energy developers, where I developed machine learning models for energy consumption forecasting. My technical ability is further demonstrated in my role as the President and Founder of Prosper Technology Student Association. Additionally, as a Life Scout, I&apos;ve cultivated leadership abilities through mentoring and community conservation efforts, combining technical expertise with a dedication to meaningful solutions.
             </Typography>
             <Typography variant="body2" sx={{ fontStyle: 'italic', mt: 2, color: '#20c997' }}>
               <strong>Grade:</strong> 12th grade <br/>
@@ -125,7 +125,7 @@ const AboutTeamPage = () => {
               Eashan Tilaye
             </Typography>
             <Typography variant="body1" gutterBottom sx={{ color: '#495057' }}>
-              Hi, I'm Eashan Tilaye, a rising sophomore at Stargate School, graduating in 2028. I have taken a bunch of computer science courses including AP Computer Science Principles. I've worked on personal projects related to artificial intelligence and I have lots of experience using different python libraries.
+              Hi, I&apos;m Eashan Tilaye, a rising sophomore at Stargate School, graduating in 2028. I have taken a bunch of computer science courses including AP Computer Science Principles. I&apos;ve worked on personal projects related to artificial intelligence and I have lots of experience using different python libraries.
             </Typography>
             <Typography variant="body2" sx={{ fontStyle: 'italic', mt: 2, color: '#20c997' }}>
               <strong>Grade:</strong> 10th grader <br/>
