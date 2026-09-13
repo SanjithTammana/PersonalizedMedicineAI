@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PersonalizedMedicineAI
 
-## Getting Started
+PersonalizedMedicineAI is a Next.js prototype that retrieves passages from a Pinecone index before sending a medical-information question to a Groq chat model. It supports general, allopathic, homeopathic, and naturopathic treatment-preference modes.
 
-First, run the development server:
+## What it does
+
+- Provides a chat interface with treatment-preference mode selection.
+- Creates an embedding for each user message with OpenAI.
+- Queries Pinecone for up to five related passages and includes matches above the configured relevance threshold in the prompt.
+- Uses Groq to generate the chat response.
+- Includes a script that extracts text from PDFs in `documents/`, chunks the text, embeds each chunk, and upserts the resulting vectors into Pinecone.
+
+## Architecture
+
+`scripts/ingest.js` builds the retrieval index from local PDFs. At request time, `app/api/chat/route.js` embeds the current question, queries the configured Pinecone index, adds retrieved text to the system prompt, and sends the final message list to Groq. The client in `app/chatbot/page.js` sends the selected mode and in-session chat history to that route.
+
+## Tech stack
+
+- React and Next.js
+- OpenAI embeddings
+- Pinecone
+- Groq SDK
+- `pdf-parse`
+- Material UI
+
+## Running locally
 
 ```bash
+git clone https://github.com/SanjithTammana/PersonalizedMedicineAI.git
+cd PersonalizedMedicineAI
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`. To populate or rebuild the vector index, run:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+node scripts/ingest.js
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment variables
 
-## Learn More
+Create `.env.local` and set:
 
-To learn more about Next.js, take a look at the following resources:
+- `GROQ_API_KEY`
+- `OPENAI_API_KEY`
+- `PINECONE_API_KEY`
+- `PINECONE_INDEX_NAME`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Optional model overrides:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `OPENAI_EMBEDDING_MODEL`
+- `GROQ_CHAT_MODEL`
 
-## Deploy on Vercel
+## Limitations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- This is an information prototype, not a diagnostic or clinical system and not a substitute for a licensed healthcare professional or emergency services.
+- Retrieval quality depends on the configured Pinecone index and the PDF corpus used to build it.
+- The route currently returns retrieval debug metadata with each response; that is useful during development but should be reviewed before a production deployment.
